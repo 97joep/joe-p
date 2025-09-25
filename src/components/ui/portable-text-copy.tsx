@@ -1,6 +1,6 @@
 'use client'
 
-import {PortableText, type PortableTextComponents} from '@portabletext/react'
+import {PortableText, type PortableTextComponents} from 'next-sanity'
 import {useRef, useState, useEffect} from 'react'
 import {CopyIcon, CheckIcon} from 'lucide-react'
 
