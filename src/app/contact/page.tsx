@@ -1,10 +1,10 @@
-import { PersonalData } from "@/sanity/dataTypes"
+import { AboutData } from "@/sanity/dataTypes"
 import { client } from "@/sanity/lib/client"
-import { personalQuery } from "@/sanity/queries"
+import { aboutQuery } from "@/sanity/queries"
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-const personal: PersonalData = await client.fetch(personalQuery);
+const personal: AboutData = await client.fetch(aboutQuery);
 
 export default function ContactPage() {
     return (

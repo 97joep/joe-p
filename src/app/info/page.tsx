@@ -1,9 +1,9 @@
-import { PersonalData } from "@/sanity/dataTypes";
+import { AboutData } from "@/sanity/dataTypes";
 import { client } from "@/sanity/lib/client"
-import { personalQuery } from "@/sanity/queries"
+import { aboutQuery } from "@/sanity/queries"
 import { PortableText } from "next-sanity";
 
-const personal: PersonalData = await client.fetch(personalQuery);
+const personal: AboutData = await client.fetch(aboutQuery);
 
 export default function InfoPage() {
     return (
