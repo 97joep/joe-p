@@ -31,7 +31,7 @@ export type ProjectData = {
     ]
 }
 
-export type PersonalData = {
+export type AboutData = {
     _id: string;
     pageTitle: string;
     pageSubheading: string;

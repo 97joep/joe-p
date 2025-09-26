@@ -1,4 +1,4 @@
-export const personalQuery = `*[_type == "about"][0]{
+export const aboutQuery = `*[_type == "about"][0]{
     _id,
     pageTitle,
     pageSubheading,
