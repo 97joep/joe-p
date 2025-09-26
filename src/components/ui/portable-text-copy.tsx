@@ -1,10 +1,20 @@
 'use client'
 
-import {PortableText, PortableTextBlock, type PortableTextComponents} from 'next-sanity'
+import {
+  PortableText,
+  type PortableTextBlock,
+  type PortableTextComponents,
+  type PortableTextMarkComponent,
+} from 'next-sanity'
 import {useRef, useState, useEffect} from 'react'
 import {CopyIcon, CheckIcon} from 'lucide-react'
 
-function CopyMark({children, value}: any) {
+type CopyMarkValue = {
+  _type: string;
+  label?: string
+}
+
+const CopyMark: PortableTextMarkComponent<CopyMarkValue> = ({children, value}) => {
   const textRef = useRef<HTMLSpanElement>(null)
   const [copied, setCopied] = useState(false)
 
@@ -44,4 +54,6 @@ export const ptComponents: PortableTextComponents = {
 export default function RichText({value}: {value: PortableTextBlock[]}) {
   return <PortableText value={value} components={ptComponents} />
 }
+
+
 
