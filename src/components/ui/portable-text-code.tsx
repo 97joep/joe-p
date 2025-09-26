@@ -1,4 +1,4 @@
-import { PortableText, type PortableTextComponents } from "next-sanity"
+import { PortableText, PortableTextBlock, type PortableTextComponents } from "next-sanity"
 
 const CodeBlock = ({
     value
@@ -27,6 +27,6 @@ export const ptComponents: PortableTextComponents = {
     },
 }
 
-export default function RichTextCode({value}: {value: any}) {
+export default function RichTextCode({value}: {value: PortableTextBlock[]}) {
     return <PortableText value={value} components={ptComponents} />
 }

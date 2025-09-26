@@ -1,6 +1,6 @@
 'use client'
 
-import {PortableText, type PortableTextComponents} from 'next-sanity'
+import {PortableText, PortableTextBlock, type PortableTextComponents} from 'next-sanity'
 import {useRef, useState, useEffect} from 'react'
 import {CopyIcon, CheckIcon} from 'lucide-react'
 
@@ -41,7 +41,7 @@ export const ptComponents: PortableTextComponents = {
   marks: { copy: CopyMark },
 }
 
-export default function RichText({value}: {value: any}) {
+export default function RichText({value}: {value: PortableTextBlock[]}) {
   return <PortableText value={value} components={ptComponents} />
 }
 
